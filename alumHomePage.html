@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="./alumHomePage.css">
+	<script src="https://kit.fontawesome.com/b4df2e2151.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="navBar">
+			<div class="logoBox">
+				<div class="logo_img">
+					<img src="./images/logo.png">
+				</div>
+				<div class="text_box">
+					<h2>B.M.S. COLLEGE OF ENGINEERING</h2>
+					<br>
+					<p>Autonoumous Institute, Affiliated to VTU</p>
+					<br>
+					<p>Estd, 1946</p>
+				</div>
+			</div>
+			<div class="navLinkBox">
+				<ul>
+					<li><a href="./alumHomePage.html">HOME</a></li>
+					<li><a href="./events.html">EVENTS</a></li>
+					<li><a href="./gallery.html">GALLERY</a></li>
+					<li><a href="./alumini.html">ALUMINI'S</a></li>
+					<li><a href="./News_feed.html">NEWSLETTER</a></li>
+					<li><a href="./join.html">JOIN</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="college_background">
+			<!-- Full-width images with number and caption text -->
+			<div class="mySlides fade">
+				<img
+					src="https://images.unsplash.com/photo-1525921429624-479b6a26d84d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
+			</div>
+
+			<div class="mySlides fade">
+				<img
+					src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
+			</div>
+
+			<div class="mySlides fade">
+				<img
+					src="https://images.unsplash.com/photo-1539413595691-37a09a48579b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
+			</div>
+
+			<!-- Next and previous buttons 
+                   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                   <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                 </div>
+                 <br>-->
+
+			<!-- The dots/circles -->
+			<div style="text-align:center">
+				<span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
+				<span class="dot" onclick="currentSlide(3)"></span>
+			</div>
+			<script>
+				var slideIndex = 0;
+				showSlides();
+
+				function showSlides() {
+					var i;
+					var slides = document.getElementsByClassName("mySlides");
+					for (i = 0; i < slides.length; i++) {
+						slides[i].style.display = "none";
+					}
+					slideIndex++;
+					if (slideIndex > slides.length) { slideIndex = 1 }
+					slides[slideIndex - 1].style.display = "block";
+					setTimeout(showSlides, 2000); // Change image every 2 seconds
+				}
+			</script>
+		</div>
+		<div class="get_engaged_container">
+			<h2 class="get_heading">Get Engaged</h2>
+			<div class="get_engaged_box">
+				<div class="row_3">
+					<div class="col_2">
+						<div class="ImgBoxCol_2">
+							<img src="./images/icons8-mortarboard-100.png">
+						</div>
+						<div class="Text_BoxCol_2">
+							<h3><a href="#">CHAPTERS
+									<p>Find, connect & engage with your fellow alumni in your city</p>
+									<p>Lorem ipsum dolor sit amet.</p>
+								</a></h3>
+						</div>
+					</div>
+					<div class="col_2">
+						<div class="ImgBoxCol_2">
+							<img src="./images/hard-working.png">
+						</div>
+						<div class="Text_BoxCol_2">
+							<h3><a href="./jobs.html">JOBS
+									<p>An online hub for job openings & postings</p>
+									<p>Lorem ipsum dolor sit amet.</p>
+								</a></h3>
+						</div>
+					</div>
+				</div>
+				<div class="row_3">
+					<div class="col_2">
+						<div class="ImgBoxCol_2">
+							<img src="./images/schedule.png">
+						</div>
+						<div class="Text_BoxCol_2">
+							<h3><a href="./events.html">EVENTS
+									<p>Be a part of some exciting events on various topics across the globe</p>
+									<p>Lorem ipsum dolor sit amet.</p>
+								</a></h3>
+						</div>
+					</div>
+					<div class="col_2">
+						<div class="ImgBoxCol_2">
+							<img src="./images/crowd.png">
+						</div>
+						<div class="Text_BoxCol_2">
+							<h3><a href="./alumini.html">FIND ALUMINI
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, id?</p>
+									<p>Lorem ipsum dolor sit amet.</p>
+								</a></h3>
+						</div>
+					</div>
+				</div>
+				<div class="row_3">
+					<div class="col_2">
+						<div class="ImgBoxCol_2">
+							<img src="./images/story-book.png">
+						</div>
+						<div class="Text_BoxCol_2">
+							<h3><a href="./contactUs.html">Connect to Us
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, id?</p>
+									<p>Lorem ipsum dolor sit amet.</p>
+								</a></h3>
+						</div>
+					</div>
+					<div class="col_2">
+						<div class="ImgBoxCol_2">
+							<img src="./images/physical-gallery.png">
+						</div>
+						<div class="Text_BoxCol_2">
+							<h3><a href="./gallery.html">GALLERY
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, id?</p>
+									<p>Lorem ipsum dolor sit amet.</p>
+								</a></h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="notable_message">
+			<div class="notable_alumni_box">
+				<h3 id="notable_alumini_heading">Notable Alumni</h3>
+				<div class="notable_alumni_pic">
+					<img src="./images/screenshot.jpg">
+				</div>
+			</div>
+			<div class="chancellor_message">
+				<h3 id="chancellor_message_heading">Chancellor message</h3>
+				<div class="chancellor_message_inner">
+					<div class="founder_img">
+						<img src="./images/founder.jpg">
+					</div>
+					<div class="text_msg">
+						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis in amet, mollitia quis
+							doloribus nobis? Impedit aut modi praesentium ad?</p>
+						<br>
+						<p>Lorem ipsum dolor sit amet.</p>
+						<br>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="CarrerOpertunities">
+			<h2 class="carrerHeading"><a href="./jobs.html">CarrerOpertunities</a></h2>
+			<div class="row_1">
+				<div class="col_3">
+					<div class="col_3Img">
+						<img src="./images/office discusiion job_1.jpg">
+					</div>
+					<div class="col_3Text">
+						<h4>Lorem ipsum dolor sit amet.</h4>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sint numquam aliquid velit
+							ducimus, sapiente quasi magni eos veniam atque voluptates harum temporibus architecto
+							quisquam dolorem at explicabo nam ea!</p>
+					</div>
+				</div>
+				<div class="col_3">
+					<div class="col_3Img">
+						<img src="./images/civil job_2.jpg">
+					</div>
+					<div class="col_3Text">
+						<h4>Lorem ipsum dolor sit amet.</h4>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sint numquam aliquid velit
+							ducimus, sapiente quasi magni eos veniam atque voluptates harum temporibus architecto
+							quisquam dolorem at explicabo nam ea!</p>
+					</div>
+				</div>
+				<div class="col_3">
+					<div class="col_3Img">
+						<img src="./images/job_3.jpg">
+					</div>
+					<div class="col_3Text">
+						<h4>Lorem ipsum dolor sit amet.</h4>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sint numquam aliquid velit
+							ducimus, sapiente quasi magni eos veniam atque voluptates harum temporibus architecto
+							quisquam dolorem at explicabo nam ea!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="Events">
+			<h2 class="EventsHeading"><a href="./events.html">Events</a></h2>
+			<div class="row_2">
+				<div class="col_4">
+					<div class="col_4Img">
+						<img src="./images/even_1.jpg">
+					</div>
+					<div class="col_4Text">
+						<h4>Lorem ipsum dolor sit amet.</h4>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sint numquam aliquid velit
+							ducimus, sapiente quasi magni eos veniam atque voluptates harum temporibus architecto
+							quisquam dolorem at explicabo nam ea!</p>
+					</div>
+				</div>
+				<div class="col_4">
+					<div class="col_4Img">
+						<img src="./images/event_2.jpg">
+					</div>
+					<div class="col_4Text">
+						<h4>Lorem ipsum dolor sit amet.</h4>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sint numquam aliquid velit
+							ducimus, sapiente quasi magni eos veniam atque voluptates harum temporibus architecto
+							quisquam dolorem at explicabo nam ea!</p>
+					</div>
+				</div>
+				<div class="col_4">
+					<div class="col_4Img">
+						<img src="./images/event_2.jpg">
+					</div>
+					<div class="col_4Text">
+						<h4>Lorem ipsum dolor sit amet.</h4>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sint numquam aliquid velit
+							ducimus, sapiente quasi magni eos veniam atque voluptates harum temporibus architecto
+							quisquam dolorem at explicabo nam ea!</p>
+					</div>
+				</div>
+				<div class="col_4">
+					<div class="col_4Img">
+						<img src="./images/event_3.jpg">
+					</div>
+					<div class="col_4Text">
+						<h4>Lorem ipsum dolor sit amet.</h4>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sint numquam aliquid velit
+							ducimus, sapiente quasi magni eos veniam atque voluptates harum temporibus architecto
+							quisquam dolorem at explicabo nam ea!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="News_feed">
+			<h2 class="NewsHeading">News Feed</h2>
+			<div class="row_2">
+				<div class="col_4">
+					<div class="col_4Img">
+						<img src="./images/news_1.jpg">
+					</div>
+					<div class="col_4Text">
+						<h4>Lorem ipsum dolor sit amet.</h4>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sint numquam aliquid velit
+							ducimus, sapiente quasi magni eos veniam atque voluptates harum temporibus architecto
+							quisquam dolorem at explicabo nam ea!</p>
+					</div>
+				</div>
+				<div class="col_4">
+					<div class="col_4Img">
+						<img src="./images/news_2.jpg">
+					</div>
+					<div class="col_4Text">
+						<h4>Lorem ipsum dolor sit amet.</h4>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sint numquam aliquid velit
+							ducimus, sapiente quasi magni eos veniam atque voluptates harum temporibus architecto
+							quisquam dolorem at explicabo nam ea!</p>
+					</div>
+				</div>
+				<div class="col_4">
+					<div class="col_4Img">
+						<img src="./images/news_3.jpg">
+					</div>
+					<div class="col_4Text">
+						<h4>Lorem ipsum dolor sit amet.</h4>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sint numquam aliquid velit
+							ducimus, sapiente quasi magni eos veniam atque voluptates harum temporibus architecto
+							quisquam dolorem at explicabo nam ea!</p>
+					</div>
+				</div>
+				<div class="col_4">
+					<div class="col_4Img">
+						<img src="./images/news_4.jpg">
+					</div>
+					<div class="col_4Text">
+						<h4>Lorem ipsum dolor sit amet.</h4>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sint numquam aliquid velit
+							ducimus, sapiente quasi magni eos veniam atque voluptates harum temporibus architecto
+							quisquam dolorem at explicabo nam ea!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="navBar">
+			<div class="vachira">
+				<h2>B.M.S. Alumni Network</h2>
+				<br>
+				<p>Basavangudi, Bangalore</p>
+			</div>
+			<div class="connectToUs">
+				<h3>Connect to us</h3>
+			</div>
+			<div class="social_media">
+				<ul>
+					<li><i class="fab fa-facebook-f"></i></li>
+					<li><i class="fab fa-twitter"></i></li>
+					<li><i class="fab fa-instagram"></i></li>
+					<li><i class="fab fa-whatsapp"></i></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
