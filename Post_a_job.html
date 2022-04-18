@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,9 @@
     <title>Post_a_job</title>
     <link rel="stylesheet" href="./Post_a_job.css">
     <script src="https://kit.fontawesome.com/b4df2e2151.js" crossorigin="anonymous"></script>
+
 </head>
+
 <body>
     <div class="container">
         <div class="navBar">
@@ -28,68 +31,75 @@
                     <li><a href="./gallery.html">GALLERY</a></li>
                     <li><a href="./alumini.html">ALUMINI'S</a></li>
                     <li><a href="./News_feed.html">NEWSLETTER</a></li>
-                    <li><a href="./join.html">JOIN</a></li> 
-                </ul>  
+                    <li><a href="./join.html">JOIN</a></li>
+                </ul>
             </div>
         </div>
         <div class="sub_container">
             <div class="job_heading_block">Post a Job</div>
             <div class="form_block">
-                <div class="row_1">
-                    <div class="col_100">
-                        <input type="text" required>
-                        <span>WorkSpace Name</span>
+                <form name="postAJobForm" action="">
+                    <div class="row_1">
+                        <div class="col_100">
+                            <input type="text" maxlength="10" name="job_title" required>
+
+                            <span>WorkSpace Name</span>
+                        </div>
                     </div>
-                </div>
-                <div class="row_2">
-                    <div class="col_50">
-                        <input type="text" required>
-                        <span>Package</span>
+                    <div class="row_2">
+                        <div class="col_50">
+                            <input type="text" required>
+                            <span>Package</span>
+                        </div>
+                        <div class="col_50">
+                            <input type="text" required>
+                            <span>Field Of Work</span>
+                        </div>
                     </div>
-                    <div class="col_50">
-                        <input type="text" required>
-                        <span>Field Of Work</span>
+                    <div class="row_2">
+                        <div class="col_50">
+                            <input type="text" required>
+                            <span>Branche's Applicable</span>
+                        </div>
+                        <div class="col_50">
+                            
+                            <input id="experience" type="text" maxlength="200" required>
+                            <span>Experience(in years)</span>
+
+                        </div>
                     </div>
-                </div>
-                <div class="row_2">
-                    <div class="col_50">
-                        <input type="text" required>
-                        <span>Branche's Applicable</span>
+                    <div class="row_2">
+                        <div class="col_51" id="upload_pic">
+                            <span>Work Poster</span>
+                            <span><i class="fas fa-camera"></i></span>
+
+                        </div>
+                        <div class="col_50">
+                            <input type="text" required>
+                            <span>Shift(Day // Night)</span>
+                        </div>
                     </div>
-                    <div class="col_50">
-                        <input type="text" required>
-                        <span>Experence(in years)</span>
+                    <div class="row_1">
+                        <div class="col_100">
+                            <input type="text" required>
+                            <span>Location of WorkSpace</span>
+                        </div>
                     </div>
-                </div>
-                <div class="row_2">
-                    <div class="col_51" id="upload_pic">
-                        <span>Work Poster</span>
-                        <span><i class="fas fa-camera"></i></span>
-                        
+                    <div class="row_1">
+                        <div class="col_100">
+                            <div class="text_area_block">
+                                <textarea id="msg" required></textarea>
+                                <span>Brief description of work</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col_50">
-                        <input type="text" required>
-                        <span>Shift(Day // Night)</span>
-                    </div>
-                </div>
-                <div class="row_1">
-                    <div class="col_100">
-                        <input type="text" required>
-                        <span>Location of WorkSpace</span>
-                    </div>
-                </div>
-                <div class="row_1">
-                    <div class="col_100">
-                       <div class="text_area_block">
-                        <textarea name ="msg" required></textarea>
-                        <span>brief description of work</span>
-                       </div>
-                    </div>
-                </div>
-                <div class="send_button">
+                   
+                    <div class="send_button">
                     <div>Done</div>
                 </div>
+                </form>
             </div>
+
         </div>
         <div class="navBar">
             <div class="vachira">
@@ -98,7 +108,7 @@
                 <p>Basavangudi, Bangalore</p>
             </div>
             <div class="connectToUs">
-                 <h2>connet with us </h2>
+                <h2>connet with us </h2>
             </div>
             <div class="social_media">
                 <ul>
@@ -110,5 +120,8 @@
             </div>
         </div>
     </div>
+
+
 </body>
+
 </html>
