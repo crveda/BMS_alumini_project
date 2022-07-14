@@ -56,7 +56,7 @@ function login()
       {
     alert('Thank You for Login & You are Redirecting to BMS alumini page');
     //Redirecting to other page or webste code or you can set your own html page.
-         window.location = "./alumHomePage.html";
+         window.location.replace("./alumHomePage.html");
         }
     }
     //Reset Inputfield code.
