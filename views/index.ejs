@@ -1,0 +1,341 @@
+<% include("includes/header.ejs") %>
+<div class="college_background">
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <img 
+        src="https://images.unsplash.com/photo-1525921429624-479b6a26d84d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      />
+    </div>
+
+    <div class="mySlides fade">
+      <img
+        src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      />
+    </div>
+
+    <div class="mySlides fade">
+      <img
+        src="https://images.unsplash.com/photo-1539413595691-37a09a48579b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      />
+    </div>
+
+    <!-- Next and previous buttons 
+               <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+               <a class="next" onclick="plusSlides(1)">&#10095;</a>
+             </div>
+             <br>-->
+
+    <!-- The dots/circles -->
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+  </div>
+  <div class="get_engaged_container">
+    <h2 class="get_heading">Get Engaged</h2>
+    <div class="get_engaged_box">
+      <div class="row_3">
+        <div class="col_2">
+          <div class="ImgBoxCol_2">
+            <img src="./images/icons8-mortarboard-100.png" />
+          </div>
+          <div class="Text_BoxCol_2">
+            <h3>
+              <a href="./contribution.html"
+                >CONTRIBUTION
+                <p>
+                  Way to some good cause , contribute to the society , pay
+                  back to your university .
+                </p>
+                <p>Let's share with others the joy of happiness</p>
+              </a>
+            </h3>
+          </div>
+        </div>
+        <div class="col_2">
+          <div class="ImgBoxCol_2">
+            <img src="./images/hard-working.png" />
+          </div>
+          <div class="Text_BoxCol_2">
+            <h3>
+              <a href="./jobs.html"
+                >JOBS
+                <p>An online hub for job openings & postings</p>
+                <p>
+                  Search the jobs that suits you and be the first to apply
+                </p>
+              </a>
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="row_3">
+        <div class="col_2">
+          <div class="ImgBoxCol_2">
+            <img src="./images/schedule.png" />
+          </div>
+          <div class="Text_BoxCol_2">
+            <h3>
+              <a href="./events.html"
+                >EVENTS
+                <p>
+                  Be a part of some exciting events on various topics across
+                  the globe
+                </p>
+                <p>Know each others and collect handfull of information.</p>
+              </a>
+            </h3>
+          </div>
+        </div>
+        <div class="col_2">
+          <div class="ImgBoxCol_2">
+            <img src="./images/crowd.png" />
+          </div>
+          <div class="Text_BoxCol_2">
+            <h3>
+              <a href="./alumini.html"
+                >FIND ALUMINI
+                <p>Know your alumini's , find them and get connected</p>
+                <p>You are door step far to know your Senior</p>
+              </a>
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="row_3">
+        <div class="col_2">
+          <div class="ImgBoxCol_2">
+            <img src="./images/story-book.png" />
+          </div>
+          <div class="Text_BoxCol_2">
+            <h3>
+              <a href="./contactUs.html"
+                >Contact Us
+                <p>Have any message to us, share your experience</p>
+                <p>Time to share your valuable feedback to us</p>
+              </a>
+            </h3>
+          </div>
+        </div>
+        <div class="col_2">
+          <div class="ImgBoxCol_2">
+            <img src="./images/physical-gallery.png" />
+          </div>
+          <div class="Text_BoxCol_2">
+            <h3>
+              <a href="./gallery.html"
+                >GALLERY
+                <p>Look over some awesome pictures of your senior's</p>
+                <p>
+                  It might be our classroom or seminor hall , check it out
+                </p>
+              </a>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="notable_message">
+    <div class="notable_alumni_box">
+      <h3 id="notable_alumini_heading">Notable Alumni</h3>
+      <div class="notable_alumni_pic">
+        <img src="./images/screenshot.jpg" />
+      </div>
+    </div>
+    <div class="chancellor_message">
+      <h3 id="chancellor_message_heading">Chancellor message</h3>
+      <div class="chancellor_message_inner">
+        <div class="founder_img">
+          <img src="./images/founder.jpg" />
+        </div>
+        <div class="text_msg">
+          <em style="font-size:20px; font-weight:bold">
+            "The roots of education are bitter, but the fruit is sweet"
+          </em>
+          <br > <br>
+        
+          <em style="font-size:20px; font-weight:300">The aim of the college, for the individual student, is to eliminate the need in his life for the college; the task is to help him become a self-educating man</em>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="CarrerOpertunities">
+    <h2 class="carrerHeading">
+      <a href="./jobs.html">CarrerOpertunities</a>
+    </h2>
+    <div class="row_1">
+      <div class="col_3">
+        <div class="col_3Img">
+            <img src="https://media.discordapp.net/attachments/855404032666239006/959352984976891914/Recruitment_Content_Writer.png?width=606&height=606" />
+        </div>
+        <!-- <div class="col_3Text">
+          <h4>Lorem ipsum dolor sit amet.</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+            sint numquam aliquid velit ducimus, sapiente quasi magni eos
+            veniam atque voluptates harum temporibus architecto quisquam
+            dolorem at explicabo nam ea!
+          </p>
+        </div> -->
+      </div>
+      <div class="col_3">
+        <div class="col_3Img">
+          <img src="https://media.discordapp.net/attachments/855404032666239006/958364973371883520/Hiring_Template.jpg?width=606&height=606" />
+        </div>
+        <!-- <div class="col_3Text">
+          <h4>Lorem ipsum dolor sit amet.</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+            sint numquam aliquid velit ducimus, sapiente quasi magni eos
+            veniam atque voluptates harum temporibus architecto quisquam
+            dolorem at explicabo nam ea!
+          </p>
+        </div> -->
+      </div>
+      <div class="col_3">
+        <div class="col_3Img">
+          <img src="https://media.discordapp.net/attachments/855404032666239006/953294592596402237/Java_Developer_Hiring_2022.jpg?width=606&height=606" />
+        </div>
+        <div class="col_3Text">
+          <h4>Lorem ipsum dolor sit amet.</h4>
+          <p>
+            
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="Events">
+    <h2 class="EventsHeading"><a href="./events.html">Events</a></h2>
+    <div class="row_2">
+      <div class="col_4">
+        <div class="col_4Img">
+          <img width="50%" src="https://media.discordapp.net/attachments/765216565011677184/965207525836341328/WhatsApp_Image_2022-04-15_at_7.00.09_PM.jpeg?width=606&height=606" />
+        </div>
+        <div class="col_4Text"><br>
+          <h3>Python Programming</h3><br>
+          <p>
+            The Department of Computer Science and Engineering in
+            collaboration with BMSCE CSE Protocol and BMSCE IEEE SB presents
+            to you a two-week Value Added Course on “Python Programming."
+          </p>
+          <h4>Register now!<h4>
+        </div>
+      </div>
+      <div class="col_4">
+        <div class="col_4Img">
+          <img src="https://media.discordapp.net/attachments/765216565011677184/962617035920117801/WhatsApp_Image_2022-04-09_at_19.00.10.jpeg?width=606&height=606" />
+        </div>
+        <div class="col_4Text"><br>
+            <h3>Tech Charades!</h3><br>
+          <p>
+            An exquisite combination of the classic game of charades with a twist of tech terminology, where one member guesses and the other tries to convey the right tech word. We present to you the Pilot event for IEEE PES Day 2022, Tech Charades!
+          </p>
+          <h4>Register now!<h4>
+        </div>
+      </div>
+      <div class="col_4">
+        <div class="col_4Img">
+          <img src="https://media.discordapp.net/attachments/765216565011677184/958388098499235840/WhatsApp_Image_2022-03-29_at_7.01.05_PM.jpeg?width=606&height=606" />
+        </div>
+        <div class="col_4Text"><br>
+            <h3>PLOG RUN</h3><br>
+          <p>
+            As a part of Swachh Bharat Abhiyaan the NSS Unit of BMSCE is conducting a PLOG RUN. We will be taking 60 volunteers for the same. All covid SOPs will be followed. Please make sure you attend the event if you fill the form. 
+          </p>
+          <h4>Register now!</h4>
+        </div>
+      </div>
+      <div class="col_4">
+        <div class="col_4Img">
+          <img src="https://media.discordapp.net/attachments/765216565011677184/957617566543675424/WhatsApp_Image_2022-03-27_at_5.56.31_PM.jpeg?width=606&height=606" />
+        </div>
+        <div class="col_4Text"><br>
+            <h3>AI in Space Tech</h3><br>
+          <p>
+            Space is an uncharted beauty with many undisclosed mysteries. AI is an advanced technology that helps us explore and understand our universe better. 
+            BMSCE IEEE Computer Society in collaboration with Spartificial presents a workshop on "AI in Space Tech".
+          </p>
+          <h4>Register now!</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="News_feed">
+    <h2 class="NewsHeading">News Feed</h2>
+    <div class="row_2">
+      <div class="col_4">
+        <div class="col_4Img">
+          <img src="https://media.discordapp.net/attachments/765216565011677184/965479267754446878/IMG-20220417-WA0010.jpg?width=606&height=606" />
+        </div>
+        <div class="col_4Text"><br>
+          <h3>Recruitment at Pentagram</h3><br>
+          <p>
+            If you are a math enthusiast, we believe this is the right club for you. 
+            Wondering how to be a part of PENTAGRAM⛧?
+            Good news, We are Recruiting again
+          </p>
+          <h4>Read more</h4>
+        </div>
+      </div>
+      <div class="col_4">
+        <div class="col_4Img">
+          <img src="https://media.discordapp.net/attachments/765216565011677184/965305892457316453/WhatsApp_Image_2022-04-17_at_8.05.14_AM.jpeg?width=606&height=606" />
+        </div>
+        <div class="col_4Text"><br>
+            <h3>IceBreaker_Orientation</h3><br>
+          <p>
+            Come join us at VAK, the Spoken Word Society of BMSCE. Whether you're just someone who wants to get better at speaking, or the next Biswa in the making, this is the place for you.
+          </p>
+          <h4>Read more</h4>
+        </div>
+      </div>
+      <div class="col_4">
+        <div class="col_4Img">
+          <img src="https://media.discordapp.net/attachments/765216565011677184/957262311482089542/Inksanity_Auditions.jpeg?width=606&height=606" />
+        </div>
+        <div class="col_4Text"><br>
+            <h3>Inksanity_Auditions</h3><br>
+          <p>
+            Looking for opportunities to express your opinions in a thrilling battle of wits? Or a chance to spin wonderful webs with the power of words?
+            Inksanity will be conducting auditions for budding debaters and writers wanting to be a part of the club!
+          </p>
+          <h4>Read more</h4>
+        </div>
+      </div>
+      <div class="col_4">
+        <div class="col_4Img">
+          <img src="https://media.discordapp.net/attachments/765216565011677184/956930925978079292/Black_and_Yellow_Webinar_Poster_Instagram_Post_1.png?width=606&height=606" />
+        </div>
+        <div class="col_4Text"><br>
+            <h3>Speaker of the month</h3><br>
+          <p>
+           Presenting to you our Speaker for the month of March. Join us to interact and learn with Dr. Chetan Singh Solanki, a professor from IIT Bombay, and Founder of Energy Swaraj Foundation. He is also addressed as the "Solar man of India".
+          </p>
+          <h4>Read more</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <% include("includes/header.ejs") %>

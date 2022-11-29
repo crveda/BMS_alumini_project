@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/jobs.css">
+    <title>JobsPages</title>
+    <script src="https://kit.fontawesome.com/b4df2e2151.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="navBar">
+            <div class="logoBox">
+                <div class="logo_img">
+                    <img src="./images/logo.png">
+                </div>
+                <div class="text_box">
+                    <h2>B.M.S ALUMINI NETWORK</h2><br>
+                    <p>Autonoumous Institute, Affiliated to VTU</p><br>
+                    <p>Estd, 1946</p>
+                </div>
+            </div>
+            <div class="navLinkBox">
+                <ul>
+                    <li><a href="/home">HOME</a></li>
+                    <li><a href="/events">EVENTS</a></li>
+                    <li><a href="/gallery">GALLERY</a></li>
+                    <li><a href="/alumini">ALUMINI'S</a></li>
+                    <li><a href="/News_feed">NEWSLETTER</a></li>
+                    <% if(isAuth) { %>
+                        <li><a href="/logOut">LOGOUT</a></li>
+                    <% } else { %>
+                      <li><a href="/join">JOIN</a></li>
+                      <% } %>
+                  </ul>  
+            </div>
+        </div>
+        <div class="jobs_main_block">
+            <div class="jobs_menu">
+                <ul>
+                    <% if(isLoggedIn) {  %>
+                    <li><div class="jobs"><a href="/jobs/PostAjob">Post a Job</a></div></li>
+                    <% } %>
+                    <li><div class="jobs"><a href="/jobs">all jobs</a><span>(<%= jobsCount.all %>)</span></div></li>
+                    <li><div class="jobs"><a href="/jobs/software">Software</a><span>(<%= jobsCount.software %>)</span></div></li>
+                    <li><div class="jobs"><a href="/jobs/ec">Electronics </a><span>(<%= jobsCount.electronics %>)</span></div></li>
+                    <li><div class="jobs"><a href="/jobs/ee">Electrical </a><span>(<%= jobsCount.Electrical %>)</span></div></li>
+                    <!-- <li><div class="jobs"><a href="/jobs/tc">Telecom</a> </a><span>(<%= jobsCount.telecom %>)</span></div></li> -->
+                    <li><div class="jobs"><a href="/jobs/civil">Construction</a><span>(<%= jobsCount.civil %>)</span></div></li>
+                    <li><div class="jobs"><a href="/jobs/mech">Mechanical</a> </a><span>(<%= jobsCount.mech %>)</span></div></li>
+                    <li><div class="jobs"><a href="/jobs/bio">Bio Tech</a> </a><span>(<%= jobsCount.bioTech %>)</span></div></li>
+                    <li><div class="jobs"><a href="/jobs/other">Remaining Branches</a> </a><span>(<%= jobsCount.others %>)</span></div></li>
+                </ul>
+            </div>
+            <div class="jobs_display_block">
+                <div class="jobs_heading">Carrer Opertunities</div>
+                <% if(jobsList.length > 0 ) { %>
+                    <% for(let i in jobsList) { %>
+                        <div class="jobs_row_col_1">
+                            <div class="job_pic"><img src="<%= jobsList[i].posterUrl %>"></div>
+                            <div class="job_details">
+                                <div class="comany_name">
+                                    <h2><%= jobsList[i].companyName %></h2>
+                                </div>
+                                <div class="package_field">
+                                    <div class="package">
+                                        <span><i class="fas fa-money-bill-alt"></i></span>
+                                        Package:: <%= jobsList[i].package %> aparox
+                                    </div>
+                                    <div class="field">
+                                        <span><i class="fas fa-laptop-code"></i></span>
+                                        <%= jobsList[i].field %>
+                                    </div>
+                                </div>
+                                <div class="office_location">
+                                    <span><i class="fas fa-map-marked-alt"></i></span>
+                                    <div class="location">
+                                        <%= jobsList[i].location %>
+                                    </div>
+                                </div>
+                                <div class="Branch_apply">
+                                    <div class="branch">
+                                        <span><i class="fas fa-users"></i></span>
+                                        Branch_apply  ::
+                                            <%= branchesApply[i] %>
+                                    </div>
+                                    <% if(jobsList[i].userId === userId && isLoggedIn==true) {%>
+                                        <button class="Apply_button" type="submit">
+                                            <a href="/jobs/edit/<%=jobsList[i].id %>">EDIT</a>
+                                        </button>
+                                    <% } else { %>
+                                        <button class="Apply_button" type="submit">
+                                            <a href="<%= jobsList[i].linkRegister %>">Apply</a>
+                                        </button>
+                                    </form>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                <%} else { %>
+                    <h1>NO jobs</h1>
+                <% } %>
+                
+            </div>
+        </div>
+        <div class="navBar">
+            <div class="vachira">
+                <h2>B.M.S. Alumni Network</h2>
+                <br>
+                <p>Basavangudi, Bangalore</p>
+            </div>
+            <div class="connectToUs">
+                 <h2>connet with us </h2>
+            </div>
+            <div class="social_media">
+                <ul>
+                    <li><i class="fab fa-facebook-f"></i></li>
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-instagram"></i></li>
+                    <li><i class="fab fa-whatsapp"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

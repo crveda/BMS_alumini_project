@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit post</title>
+    <link rel="stylesheet" href="../CSS/Post_a_job.css">
+    <script src="https://kit.fontawesome.com/b4df2e2151.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="navBar">
+            <div class="logoBox">
+                <div class="logo_img">
+                    <img src="../images/logo.png">
+                </div>
+                <div class="text_box">
+                    <h2>B.M.S ALUMINI NETWORK</h2><br>
+                    <p>Autonoumous Institute, Affiliated to VTU</p><br>
+                    <p>Estd, 1946</p>
+                </div>
+            </div>
+            <div class="navLinkBox">
+                <ul>
+                    <li><a href="/home">HOME</a></li>
+                    <li><a href="/events">EVENTS</a></li>
+                    <li><a href="/gallery">GALLERY</a></li>
+                    <li><a href="/alumini">ALUMINI'S</a></li>
+                    <li><a href="/News_feed">NEWSLETTER</a></li>
+                    <% if(isAuth) { %>
+                        <li><a href="/logOut">LOGOUT</a></li>
+                    <% } else { %>
+                      <li><a href="/join">JOIN</a></li>
+                      <% } %>
+                  </ul> 
+            </div>
+        </div>
+        <div class="sub_container">
+            <div class="job_heading_block">Post a Job</div>
+            <div class="form_block">
+            <form action="/jobs/edit" method="POST">
+                <div class="row_1">
+                    <div class="col_100">
+                        <input type="text" name="companyName" value= "<%= job.companyName %>" maxlength="10" required>
+                        <span>WorkSpace Name</span>
+                    </div>
+                </div>
+                <div class="row_2">
+                    <div class="col_50">
+                        <input type="text" value= "<%= job.package%>" name="package" required>
+                        <span>Package</span>
+                    </div>
+                    <div class="col_50">
+                        <input type="text" value="<%=job.field %>" name="field" required>
+                        <span>Field Of Work</span>
+                    </div>
+                </div>
+                <div class="row_2">
+                    <div class="col_50">
+                        <input type="text" value="<%=job.experence %>" name ="experence" required>
+                        <span>Experence(in years)</span>
+                    </div>
+                    <div class="col_50">
+                        <input type="text" value="<%=job.workFromHome %>" placeholder="yes/no" name ="workFromHome" required>
+                        <span>WorkFromHome</span>
+                    </div>
+                </div>
+                <div class="row_1">
+                    <div class="col_100">
+                        <!-- <input type="radio" value="CS" name="branchesApply">CS
+                        <input type="radio" value="IS" name="branchesApply">IS
+                        <input type="radio" value="EC" name="branchesApply">EC
+                        <input type="radio" value="EE" name="branchesApply">EE
+                        <input type="radio" value="Civil" name="branchesApply">Civil
+                        <input type="radio" value="Mech" name="branchesApply">Mech
+                        <input type="radio" value="BioTech" name="branchesApply">BioTech
+                        <input type="radio" value="Others" name="branchesApply">Others</br>      -->
+                        <input type="text" placeholder="CS,IS,EC,EE,Civil,Mech,BioTech,Others" name="branchesApply" value="<%= branchesApply %>">
+                        <span>BranchesApply</span>
+                    </div>
+                </div>
+                <div class="row_2">
+                    <div class="col_51" id="upload_pic">
+                        <span>Work Poster</span>
+                        <span><i class="fas fa-camera"></i>
+                        <input type="text" value= "<%= job.posterUrl %>" name="posterUrl"></span>
+                        
+                    </div>
+                    <div class="col_50">
+                        <input type="text" value="<%= job.shift %>" name="shift" placeholder="Day // Night" required>
+                        <span>Shift(Day // Night)</span>
+                    </div>
+                </div>
+                <div class="row_1">
+                    <div class="col_100">
+                        <input type="text" value="<%=job.location %>" name="location" required>
+                        <span>Location of WorkSpace</span>
+                    </div>
+                </div>
+                <div class="row_1">
+                    <div class="col_100">
+                        <input type="text" value="<%=job.linkRegister %>" name="linkRegister" required>
+                        <span>Location of WorkSpace</span>
+                    </div>
+                </div>
+                <div class="row_1">
+                    <div class="col_100">
+                       <div class="text_area_block">
+                        <textarea name ="msg" maxlength="200" required>
+                            <%= job.msg %>
+                        </textarea>
+                        <span>brief description of work</span>
+                       </div>
+                    </div>
+                </div>
+                <input type="hidden" value="<= job.id %>" name="jobId">
+                <button class="send_button" type="submit">
+                    edit
+                </button>
+            </div>
+            </form>
+        </div>
+        <div class="navBar">
+            <div class="vachira">
+                <h2>B.M.S. Alumni Network</h2>
+                <br>
+                <p>Basavangudi, Bangalore</p>
+            </div>
+            <div class="connectToUs">
+                 <h2>connet with us </h2>
+            </div>
+            <div class="social_media">
+                <ul>
+                    <li><i class="fab fa-facebook-f"></i></li>
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-instagram"></i></li>
+                    <li><i class="fab fa-whatsapp"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
